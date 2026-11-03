@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Po wdrozeniu dodaj: Sitemap: https://TWOJA-DOMENA.pl/sitemap.xml
