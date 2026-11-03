@@ -139,36 +139,232 @@
 
     <figure class="hero__art rv">
       <svg class="pict" viewBox="0 0 560 440" role="img" aria-labelledby="pT pD">
-        <title id="pT">Piktogram: nauczyciel wskazuje ekran z danymi z czujnika przepływu</title>
-        <desc id="pD">Trzy małe postacie słuchają nauczyciela, który wskazuje monitor z wykresem. Monitor łączy czerwony przewód z czujnikiem siatkowym w rurze pomiarowej.</desc>
-        <line class="ground" x1="8" y1="392" x2="552" y2="392"/>
-        <!-- uczniowie -->
-        <g class="kid k1"><circle cx="46" cy="276" r="13"/><rect x="31" y="294" width="30" height="58" rx="5"/><rect x="34" y="350" width="10" height="42"/><rect x="48" y="350" width="10" height="42"/></g>
-        <g class="kid k2"><circle cx="88" cy="262" r="14"/><rect x="72" y="281" width="32" height="68" rx="5"/><rect x="75" y="347" width="11" height="45"/><rect x="90" y="347" width="11" height="45"/></g>
-        <g class="kid k3"><circle cx="130" cy="278" r="13"/><rect x="115" y="296" width="30" height="56" rx="5"/><rect x="118" y="350" width="10" height="42"/><rect x="132" y="350" width="10" height="42"/></g>
-        <!-- nauczyciel -->
-        <g class="teacher">
-          <circle cx="212" cy="150" r="27"/>
-          <path d="M184 186h56l24 118H160z"/>
-          <rect x="188" y="300" width="18" height="92"/><rect x="218" y="300" width="18" height="92"/>
-          <g class="arm"><path d="M236 206L318 150" stroke-width="15" stroke-linecap="round" fill="none"/></g>
-        </g>
-        <!-- monitor -->
-        <g class="mon">
-          <rect x="338" y="50" width="194" height="128" rx="7" class="mon__f"/>
-          <rect class="bar b1" x="366" y="118" width="22" height="38"/><rect class="bar b2" x="400" y="98" width="22" height="58"/><rect class="bar b3" x="434" y="108" width="22" height="48"/><rect class="bar b4 red" x="468" y="78" width="22" height="78"/>
-          <rect x="425" y="178" width="12" height="40"/><rect x="391" y="216" width="80" height="9" rx="3"/>
-        </g>
-        <!-- kabel + rura + czujnik -->
-        <path class="cable" d="M460 302V226" />
-        <g class="pipe">
-          <rect x="300" y="296" width="248" height="58" rx="8" class="pipe__f"/>
-          <rect x="296" y="286" width="12" height="78" rx="3"/><rect x="540" y="286" width="12" height="78" rx="3"/>
-          <path class="flow" d="M318 325H530"/>
-          <g class="mesh"><ellipse cx="420" cy="325" rx="18" ry="40" class="mesh__r"/><path d="M420 285v80M406 292v66M434 292v66M402 316h36M402 334h36"/></g>
-          <rect x="330" y="354" width="12" height="38"/><rect x="500" y="354" width="12" height="38"/>
-        </g>
-      </svg>
+              <title id="pT">Piktogram: pomiar tomograficzny rury, sieć neuronowa i monitor z odtworzonym obrazem</title>
+              <desc id="pD">Pierścień elektrod wokół przekroju rury mierzy przez nią sygnały. Dane płyną czerwonym przewodem do schematu sieci neuronowej, a stamtąd na monitor z odtworzonym obrazem wnętrza rury i wykresem. Obok stoi inżynier przy laptopie, rura pomiarowa z opaską elektrod i szafa serwerowa.</desc>
+              <defs><clipPath id="tomoClip"><circle cx="426" cy="98" r="40"/></clipPath></defs>
+              <line class="ground" x1="8" y1="392" x2="552" y2="392"/>
+              <!-- przekrój rury z pierścieniem elektrod -->
+              <g class="tomo">
+                <circle class="wall" cx="100" cy="130" r="64"/>
+                <g class="scan">
+                  <line class="chord" x1="100" y1="72" x2="59.0" y2="171.0"/>
+                  <line class="chord" x1="100" y1="72" x2="77.8" y2="183.6"/>
+                  <line class="chord" x1="100" y1="72" x2="100.0" y2="188.0"/>
+                  <line class="chord" x1="100" y1="72" x2="122.2" y2="183.6"/>
+                  <line class="chord" x1="100" y1="72" x2="141.0" y2="171.0"/>
+                </g>
+                <ellipse class="blob" cx="86" cy="116" rx="15" ry="12" transform="rotate(-20 86 116)"/>
+                <ellipse class="blob blob--r" cx="122" cy="150" rx="11" ry="9" transform="rotate(25 122 150)"/>
+                <rect class="el" style="--k:0" x="94" y="50" width="12" height="16" rx="2" transform="rotate(0 100 130)"/>
+                <rect class="el" style="--k:1" x="94" y="50" width="12" height="16" rx="2" transform="rotate(22.5 100 130)"/>
+                <rect class="el" style="--k:2" x="94" y="50" width="12" height="16" rx="2" transform="rotate(45 100 130)"/>
+                <rect class="el" style="--k:3" x="94" y="50" width="12" height="16" rx="2" transform="rotate(67.5 100 130)"/>
+                <rect class="el" style="--k:4" x="94" y="50" width="12" height="16" rx="2" transform="rotate(90 100 130)"/>
+                <rect class="el" style="--k:5" x="94" y="50" width="12" height="16" rx="2" transform="rotate(112.5 100 130)"/>
+                <rect class="el" style="--k:6" x="94" y="50" width="12" height="16" rx="2" transform="rotate(135 100 130)"/>
+                <rect class="el" style="--k:7" x="94" y="50" width="12" height="16" rx="2" transform="rotate(157.5 100 130)"/>
+                <rect class="el" style="--k:8" x="94" y="50" width="12" height="16" rx="2" transform="rotate(180 100 130)"/>
+                <rect class="el" style="--k:9" x="94" y="50" width="12" height="16" rx="2" transform="rotate(202.5 100 130)"/>
+                <rect class="el" style="--k:10" x="94" y="50" width="12" height="16" rx="2" transform="rotate(225 100 130)"/>
+                <rect class="el" style="--k:11" x="94" y="50" width="12" height="16" rx="2" transform="rotate(247.5 100 130)"/>
+                <rect class="el" style="--k:12" x="94" y="50" width="12" height="16" rx="2" transform="rotate(270 100 130)"/>
+                <rect class="el" style="--k:13" x="94" y="50" width="12" height="16" rx="2" transform="rotate(292.5 100 130)"/>
+                <rect class="el" style="--k:14" x="94" y="50" width="12" height="16" rx="2" transform="rotate(315 100 130)"/>
+                <rect class="el" style="--k:15" x="94" y="50" width="12" height="16" rx="2" transform="rotate(337.5 100 130)"/>
+              </g>
+              <!-- przewody pierścień → sieć → monitor -->
+              <path class="cable" d="M182 130H204"/>
+              <path class="cable" d="M352 130H369"/>
+              <!-- sieć neuronowa -->
+              <g class="net">
+                <line class="edge" x1="204" y1="130" x2="234" y2="70"/>
+                <line class="edge" x1="204" y1="130" x2="234" y2="110"/>
+                <line class="edge" x1="204" y1="130" x2="234" y2="150"/>
+                <line class="edge" x1="204" y1="130" x2="234" y2="190"/>
+                <line class="edge" x1="330" y1="90" x2="352" y2="130"/>
+                <line class="edge" x1="330" y1="130" x2="352" y2="130"/>
+                <line class="edge" x1="330" y1="170" x2="352" y2="130"/>
+                <line class="edge" x1="234" y1="70" x2="282" y2="50"/>
+                <line class="edge p" x1="234" y1="70" x2="282" y2="90"/>
+                <line class="edge" x1="234" y1="70" x2="282" y2="130"/>
+                <line class="edge" x1="234" y1="70" x2="282" y2="170"/>
+                <line class="edge" x1="234" y1="70" x2="282" y2="210"/>
+                <line class="edge" x1="234" y1="110" x2="282" y2="50"/>
+                <line class="edge" x1="234" y1="110" x2="282" y2="90"/>
+                <line class="edge p" x1="234" y1="110" x2="282" y2="130"/>
+                <line class="edge" x1="234" y1="110" x2="282" y2="170"/>
+                <line class="edge" x1="234" y1="110" x2="282" y2="210"/>
+                <line class="edge" x1="234" y1="150" x2="282" y2="50"/>
+                <line class="edge" x1="234" y1="150" x2="282" y2="90"/>
+                <line class="edge" x1="234" y1="150" x2="282" y2="130"/>
+                <line class="edge p" x1="234" y1="150" x2="282" y2="170"/>
+                <line class="edge" x1="234" y1="150" x2="282" y2="210"/>
+                <line class="edge" x1="234" y1="190" x2="282" y2="50"/>
+                <line class="edge" x1="234" y1="190" x2="282" y2="90"/>
+                <line class="edge" x1="234" y1="190" x2="282" y2="130"/>
+                <line class="edge" x1="234" y1="190" x2="282" y2="170"/>
+                <line class="edge p" x1="234" y1="190" x2="282" y2="210"/>
+                <line class="edge" x1="282" y1="50" x2="330" y2="90"/>
+                <line class="edge" x1="282" y1="50" x2="330" y2="130"/>
+                <line class="edge" x1="282" y1="50" x2="330" y2="170"/>
+                <line class="edge p" x1="282" y1="90" x2="330" y2="90"/>
+                <line class="edge" x1="282" y1="90" x2="330" y2="130"/>
+                <line class="edge" x1="282" y1="90" x2="330" y2="170"/>
+                <line class="edge" x1="282" y1="130" x2="330" y2="90"/>
+                <line class="edge p" x1="282" y1="130" x2="330" y2="130"/>
+                <line class="edge" x1="282" y1="130" x2="330" y2="170"/>
+                <line class="edge" x1="282" y1="170" x2="330" y2="90"/>
+                <line class="edge" x1="282" y1="170" x2="330" y2="130"/>
+                <line class="edge p" x1="282" y1="170" x2="330" y2="170"/>
+                <line class="edge" x1="282" y1="210" x2="330" y2="90"/>
+                <line class="edge" x1="282" y1="210" x2="330" y2="130"/>
+                <line class="edge" x1="282" y1="210" x2="330" y2="170"/>
+                <circle class="node on" style="--d:0.00s" cx="234" cy="70" r="9"/>
+                <circle class="node" style="--d:0.09s" cx="234" cy="110" r="9"/>
+                <circle class="node" style="--d:0.18s" cx="234" cy="150" r="9"/>
+                <circle class="node on" style="--d:0.27s" cx="234" cy="190" r="9"/>
+                <circle class="node" style="--d:0.55s" cx="282" cy="50" r="9"/>
+                <circle class="node" style="--d:0.64s" cx="282" cy="90" r="9"/>
+                <circle class="node on" style="--d:0.73s" cx="282" cy="130" r="9"/>
+                <circle class="node" style="--d:0.82s" cx="282" cy="170" r="9"/>
+                <circle class="node" style="--d:0.91s" cx="282" cy="210" r="9"/>
+                <circle class="node" style="--d:1.10s" cx="330" cy="90" r="9"/>
+                <circle class="node r" style="--d:1.19s" cx="330" cy="130" r="9"/>
+                <circle class="node" style="--d:1.28s" cx="330" cy="170" r="9"/>
+              </g>
+              <!-- monitor: obraz rekonstruowany + wykres -->
+              <g class="mon">
+                <rect class="card" x="372" y="44" width="168" height="148" rx="7"/>
+                <g clip-path="url(#tomoClip)">
+                  <rect class="cell" style="--o:0.15;--d:0.00s" x="402" y="58" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:0.00s" x="410" y="58" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.12;--d:0.00s" x="418" y="58" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:0.00s" x="426" y="58" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:0.00s" x="434" y="58" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:0.00s" x="442" y="58" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.12;--d:0.30s" x="394" y="66" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.16;--d:0.30s" x="402" y="66" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.19;--d:0.30s" x="410" y="66" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.20;--d:0.30s" x="418" y="66" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.13;--d:0.30s" x="426" y="66" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:0.30s" x="434" y="66" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:0.30s" x="442" y="66" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:0.30s" x="450" y="66" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.16;--d:0.60s" x="386" y="74" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.21;--d:0.60s" x="394" y="74" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.28;--d:0.60s" x="402" y="74" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.44;--d:0.60s" x="410" y="74" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.41;--d:0.60s" x="418" y="74" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.27;--d:0.60s" x="426" y="74" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:0.60s" x="434" y="74" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:0.60s" x="442" y="74" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:0.60s" x="450" y="74" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:0.60s" x="458" y="74" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:0.90s" x="386" y="82" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.25;--d:0.90s" x="394" y="82" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.57;--d:0.90s" x="402" y="82" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.89;--d:0.90s" x="410" y="82" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.80;--d:0.90s" x="418" y="82" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.41;--d:0.90s" x="426" y="82" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.21;--d:0.90s" x="434" y="82" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.12;--d:0.90s" x="442" y="82" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:0.90s" x="450" y="82" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:0.90s" x="458" y="82" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.13;--d:1.20s" x="386" y="90" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.21;--d:1.20s" x="394" y="90" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.48;--d:1.20s" x="402" y="90" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.79;--d:1.20s" x="410" y="90" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.66;--d:1.20s" x="418" y="90" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.34;--d:1.20s" x="426" y="90" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.19;--d:1.20s" x="434" y="90" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:1.20s" x="442" y="90" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.12;--d:1.20s" x="450" y="90" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:1.20s" x="458" y="90" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:1.50s" x="386" y="98" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:1.50s" x="394" y="98" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.22;--d:1.50s" x="402" y="98" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.31;--d:1.50s" x="410" y="98" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.31;--d:1.50s" x="418" y="98" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:1.50s" x="426" y="98" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:1.50s" x="434" y="98" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:1.50s" x="442" y="98" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:1.50s" x="450" y="98" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.12;--d:1.50s" x="458" y="98" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:1.80s" x="386" y="106" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:1.80s" x="394" y="106" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.13;--d:1.80s" x="402" y="106" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:1.80s" x="410" y="106" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.16;--d:1.80s" x="418" y="106" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:1.80s" x="426" y="106" width="8" height="8"/>
+                  <rect class="cell red" style="--o:0.87;--d:1.80s" x="434" y="106" width="8" height="8"/>
+                  <rect class="cell red" style="--o:0.77;--d:1.80s" x="442" y="106" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:1.80s" x="450" y="106" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:1.80s" x="458" y="106" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:2.10s" x="386" y="114" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:2.10s" x="394" y="114" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:2.10s" x="402" y="114" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.12;--d:2.10s" x="410" y="114" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:2.10s" x="418" y="114" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:2.10s" x="426" y="114" width="8" height="8"/>
+                  <rect class="cell red" style="--o:0.63;--d:2.10s" x="434" y="114" width="8" height="8"/>
+                  <rect class="cell red" style="--o:0.58;--d:2.10s" x="442" y="114" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:2.10s" x="450" y="114" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:2.10s" x="458" y="114" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:2.40s" x="394" y="122" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:2.40s" x="402" y="122" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:2.40s" x="410" y="122" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.12;--d:2.40s" x="418" y="122" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:2.40s" x="426" y="122" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:2.40s" x="434" y="122" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:2.40s" x="442" y="122" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.12;--d:2.40s" x="450" y="122" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:2.70s" x="402" y="130" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:2.70s" x="410" y="130" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.17;--d:2.70s" x="418" y="130" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.12;--d:2.70s" x="426" y="130" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.14;--d:2.70s" x="434" y="130" width="8" height="8"/>
+                  <rect class="cell" style="--o:0.15;--d:2.70s" x="442" y="130" width="8" height="8"/>
+                  <rect class="sweep" x="380" y="58" width="92" height="3"/>
+                </g>
+                <circle class="ringo" cx="426" cy="98" r="40"/>
+                <rect class="bar b1" x="480" y="108" width="10" height="30"/>
+                <rect class="bar b2" x="495" y="90" width="10" height="48"/>
+                <rect class="bar b3" x="510" y="100" width="10" height="38"/>
+                <rect class="bar b4 red" x="525" y="74" width="10" height="64"/>
+                <rect x="478" y="138" width="52" height="3"/>
+                <path class="line" style="--L:157" d="M386 176 L408 168 L430 172 L452 158 L474 164 L496 154 L518 160 L530 150"/>
+                <rect x="450" y="192" width="12" height="22"/><rect x="416" y="212" width="80" height="9" rx="3"/>
+              </g>
+              <!-- inżynier przy laptopie -->
+              <path class="cable" d="M100 214V284"/>
+              <g class="desk"><rect x="22" y="337" width="154" height="10"/><rect x="32" y="347" width="10" height="45"/><rect x="156" y="347" width="10" height="45"/>
+                <rect class="card" x="60" y="284" width="64" height="46" rx="4" style="stroke-width:5"/><rect x="50" y="330" width="86" height="7" rx="3"/>
+                <path class="trace" d="M68 308q5-14 10 0t10 0t10 0t10 0t10 0t10 0"/>
+              </g>
+              <g class="eng">
+                <circle cx="224" cy="262" r="16"/>
+                <path d="M203 284h42l18 72H185z"/>
+                <rect x="198" y="354" width="13" height="38"/><rect x="228" y="354" width="13" height="38"/>
+                <g class="arm"><path d="M244 302L318 238" stroke-width="13" stroke-linecap="round" fill="none"/></g>
+              </g>
+              <!-- rura pomiarowa z opaską elektrod, szafa serwerowa -->
+              <path class="cable" d="M375 378V386H470"/>
+              <g class="pipe">
+                <rect class="card" x="296" y="322" width="146" height="50" rx="8"/>
+                <rect x="290" y="312" width="12" height="70" rx="3"/><rect x="436" y="312" width="12" height="70" rx="3"/>
+                <path class="flow" d="M312 347H358M392 347H424"/>
+                <rect class="band" x="368" y="316" width="14" height="62" rx="2"/>
+                <rect x="312" y="372" width="12" height="20"/><rect x="410" y="372" width="12" height="20"/>
+              </g>
+              <path class="cable" d="M504 258V238H456V222"/>
+              <g class="rack">
+                <rect class="card" x="470" y="258" width="68" height="134" rx="4"/>
+                <rect x="480" y="270" width="48" height="20"/><circle class="led" style="--d:0.00s" cx="490" cy="280" r="3.5"/><rect class="slit" x="500" y="275" width="22" height="3"/><rect class="slit" x="500" y="282" width="22" height="3"/>
+                <rect x="480" y="298" width="48" height="20"/><circle class="led r" style="--d:0.45s" cx="490" cy="308" r="3.5"/><rect class="slit" x="500" y="303" width="22" height="3"/><rect class="slit" x="500" y="310" width="22" height="3"/>
+                <rect x="480" y="326" width="48" height="20"/><circle class="led" style="--d:0.90s" cx="490" cy="336" r="3.5"/><rect class="slit" x="500" y="331" width="22" height="3"/><rect class="slit" x="500" y="338" width="22" height="3"/>
+                <rect x="480" y="354" width="48" height="20"/><circle class="led" style="--d:1.35s" cx="490" cy="364" r="3.5"/><rect class="slit" x="500" y="359" width="22" height="3"/><rect class="slit" x="500" y="366" width="22" height="3"/>
+              </g>
+            </svg>
       <figcaption class="type cap">fundusze UE &middot; AI i pomiary &middot; IT &mdash; Rzeszów</figcaption>
       <span class="stamp stamp--r" aria-hidden="true">od&nbsp;2008</span>
     </figure>

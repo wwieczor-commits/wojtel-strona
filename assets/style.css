@@ -122,43 +122,74 @@ h1,h2,h3,h4{margin:0;font-weight:400}
 .kicker{font-size:.9rem;letter-spacing:.08em;margin-bottom:1.1rem;display:inline-block;border-bottom:3px solid var(--red);padding-bottom:.3rem}
 .note{max-width:34rem;background:rgba(242,234,214,.75);border-left:6px solid var(--red);padding:.9rem 1.1rem;margin-top:1.4rem;box-shadow:var(--sh)}
 .hero__art{position:relative;margin:0;padding:1rem 1rem .8rem;background:rgba(242,234,214,.5);border:2px solid var(--ink);box-shadow:var(--sh);transform:rotate(.8deg)}
-.pict{width:100%;height:auto;overflow:visible}
+/* ilustracja hero: tomograf → sieć neuronowa → monitor (stan bazowy = statyczny) */
+.pict{width:100%;height:auto;overflow:visible;fill:var(--ink);stroke:none;--T:12s}
 .pict *{vector-effect:non-scaling-stroke}
 .pict .ground{stroke:var(--ink);stroke-width:4}
-.pict g,.pict rect,.pict circle,.pict path:not(.flow):not(.cable){fill:var(--ink)}
-.pict .mon__f,.pict .pipe__f{fill:var(--cream);stroke:var(--ink);stroke-width:6}
-.pict .pipe__f{fill:rgba(242,234,214,.6)}
-.pict .bar{fill:var(--ink);transform-box:fill-box;transform-origin:bottom}
-.pict .bar.red{fill:var(--red)}
+.pict .card{fill:var(--cream);stroke:var(--ink);stroke-width:6}
+.pict .wall{fill:rgba(242,234,214,.6);stroke:var(--ink);stroke-width:10}
+.pict .chord{stroke:var(--ink);stroke-width:2;stroke-dasharray:6 4;opacity:.75}
+.pict .blob{fill:var(--ink)}
+.pict .blob--r{fill:rgba(224,69,43,.55);stroke:var(--ink);stroke-width:3}
+.pict .scan{transform-origin:100px 130px}
+.pict .edge{fill:none;stroke:var(--ink);stroke-width:1.5;opacity:.38}
+.pict .edge.p{stroke-width:3;opacity:.95;stroke-dasharray:3 14;stroke-linecap:round}
+.pict .node{fill:var(--cream);stroke:var(--ink);stroke-width:4}
+.pict .node.on{fill:var(--ink)}
+.pict .node.r{fill:var(--red)}
 .pict .cable{fill:none;stroke:var(--red);stroke-width:4;stroke-dasharray:8 7}
 .pict .flow{fill:none;stroke:var(--ink);stroke-width:4;stroke-dasharray:3 14;stroke-linecap:round}
-.pict .mesh path{fill:none!important;stroke:var(--ink);stroke-width:3}
-.pict .mesh__r{fill:rgba(224,69,43,.18)!important;stroke:var(--ink);stroke-width:5}
-.pict .arm path{fill:none!important;stroke:var(--ink)}
+.pict .cell{opacity:var(--o)}
+.pict .cell.red{fill:var(--red)}
+.pict .sweep{fill:var(--red);opacity:0}
+.pict .ringo{fill:none;stroke:var(--ink);stroke-width:3}
+.pict .bar{transform-box:fill-box;transform-origin:bottom}
+.pict .bar.red{fill:var(--red)}
+.pict .line{fill:none;stroke:var(--ink);stroke-width:3.5;stroke-linejoin:round;stroke-linecap:round;vector-effect:none}
+.pict .trace{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-dasharray:16 5}
+.pict .led{fill:var(--cream)}
+.pict .led.r{fill:var(--red)}
+.pict .slit{fill:var(--cream)}
+.pict .arm path{fill:none;stroke:var(--ink)}
 .pict .arm{transform-box:fill-box;transform-origin:0 100%}
-.pict .kid{transform-box:fill-box;transform-origin:bottom}
+@media (prefers-reduced-motion:no-preference){
+  .pict .scan{animation:spin var(--T) linear infinite}
+  .pict .el{animation:elec var(--T) linear infinite;animation-delay:calc(var(--T) / 16 * var(--k))}
+  .pict .node{animation:node 3.6s ease-in-out infinite;animation-delay:var(--d)}
+  .pict .edge.p{animation:flow 1.1s linear infinite}
+  .pict .cable{animation:cflow 1.3s linear infinite}
+  .pict .flow{animation:flow 1.1s linear infinite}
+  .pict .trace{animation:cflow 1.6s linear infinite reverse}
+  .pict .cell{animation:cell 5s ease-in-out infinite backwards;animation-delay:var(--d)}
+  .pict .sweep{animation:sweep 5s linear infinite}
+  .pict .bar{animation:grow 5s ease-in-out infinite}
+  .pict .b2{animation-delay:.25s}.pict .b3{animation-delay:.5s}.pict .b4{animation-delay:.75s}
+  .pict .line{stroke-dasharray:var(--L);animation:draw 5s ease-in-out infinite}
+  .pict .led{animation:blink 1.8s steps(1,end) infinite;animation-delay:var(--d)}
+  .pict .arm{animation:point 3.6s ease-in-out infinite}
+  .hero__art:hover .pict{--T:4s}
+  .hero__art:hover .pict .flow,.hero__art:hover .pict .edge.p{animation-duration:.4s}
+  .hero__art:hover .pict .cable{animation-duration:.5s}
+  .hero__art:hover .pict .arm{animation-duration:1.2s}
+  .hero__art:hover .pict .edge{opacity:.6}
+}
+@keyframes flow{to{stroke-dashoffset:-34}}
+@keyframes cflow{to{stroke-dashoffset:-30}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes elec{0%,7%{fill:var(--red)}12%,100%{fill:var(--ink)}}
+@keyframes node{0%,4%,52%,100%{fill:var(--cream)}14%,38%{fill:var(--lit,var(--ink))}}
+@keyframes cell{0%,100%{opacity:.06}9%,82%{opacity:var(--o)}}
+@keyframes sweep{0%{transform:translateY(0);opacity:1}60%{transform:translateY(77px);opacity:1}61%,100%{transform:translateY(77px);opacity:0}}
+@keyframes grow{0%,100%{transform:scaleY(.2)}45%,75%{transform:scaleY(1)}}
+@keyframes draw{0%{stroke-dashoffset:var(--L)}55%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:calc(var(--L) * -1)}}
+@keyframes blink{0%{opacity:1}50%{opacity:.2}}
+@keyframes point{50%{transform:rotate(-9deg)}}
+
 .cap{font-size:.82rem;margin:.7rem 0 0;text-align:right;letter-spacing:.04em}
 .stamp{position:absolute;font:1.35rem/1 var(--f-head);text-transform:uppercase;color:var(--red);border:3px solid var(--red);padding:.4rem .7rem .3rem;letter-spacing:.06em;transform:rotate(-9deg);opacity:.92;mix-blend-mode:multiply;text-align:center}
 .stamp--r{right:-.6rem;top:-1.2rem;transform:rotate(8deg)}
 .stamp small{font:.7rem/1 var(--f-type);letter-spacing:.2em}
 .stamp--l{right:2.2rem;top:.9rem}
-@media (prefers-reduced-motion:no-preference){
-  .pict .flow{animation:flow 1.1s linear infinite}
-  .pict .cable{animation:flow 1.4s linear infinite reverse}
-  .pict .mesh{transform-box:fill-box;transform-origin:center;animation:mesh 5s ease-in-out infinite}
-  .pict .bar{animation:bars 3.2s ease-in-out infinite}
-  .pict .b2{animation-delay:.3s}.pict .b3{animation-delay:.6s}.pict .b4{animation-delay:.9s}
-  .pict .arm{animation:point 3.6s ease-in-out infinite}
-  .pict .kid{animation:kid 2.8s ease-in-out infinite}
-  .pict .k2{animation-delay:.4s}.pict .k3{animation-delay:.9s}
-  .hero__art:hover .pict .flow{animation-duration:.4s}
-  .hero__art:hover .pict .arm{animation-duration:1.2s}
-}
-@keyframes flow{to{stroke-dashoffset:-34}}
-@keyframes mesh{50%{transform:scaleX(.55)}}
-@keyframes bars{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.62)}}
-@keyframes point{50%{transform:rotate(-9deg)}}
-@keyframes kid{50%{transform:translateY(-4px)}}
 
 /* liczniki */
 .facts{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;padding:0;margin:clamp(2rem,5vw,3.5rem) auto 0}
