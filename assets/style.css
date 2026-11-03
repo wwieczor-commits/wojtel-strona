@@ -400,8 +400,8 @@ html{overflow-x:clip}
 @media (max-width:600px){.stamp--l{font-size:.95rem;right:.6rem;top:-.9rem}.clip{display:none}}
 
 /* logo w hero */
-.hero__logo{display:block;width:fit-content;margin:0 0 18px;opacity:.92;transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .35s}
-.hero__logo img{display:block;height:56px;width:auto;filter:drop-shadow(2px 3px 0 rgba(18,17,16,.12))}
+.hero__logo{display:block;width:fit-content;margin:0 0 22px;opacity:.92;transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .35s}
+.hero__logo img{display:block;height:80px;width:auto;filter:drop-shadow(2px 3px 0 rgba(18,17,16,.12))}
 .hero__logo:hover{opacity:1;transform:rotate(-1.5deg) translateY(-2px)}
-@media (max-width:640px){.hero__logo img{height:42px}.hero__logo{margin-bottom:12px}}
+@media (max-width:640px){.hero__logo img{height:58px}.hero__logo{margin-bottom:12px}}
 @media (prefers-reduced-motion:reduce){.hero__logo{transition:none}}
