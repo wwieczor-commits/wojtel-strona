@@ -405,3 +405,32 @@ html{overflow-x:clip}
 .hero__logo:hover{opacity:1;transform:rotate(-1.5deg) translateY(-2px)}
 @media (max-width:640px){.hero__logo img{height:58px}.hero__logo{margin-bottom:12px}}
 @media (prefers-reduced-motion:reduce){.hero__logo{transition:none}}
+
+/* ===== PODSTRONA: PROJEKT UE ===== */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.rk__nav .rk__back{background:var(--red);color:var(--cream);margin-left:.3rem}
+.rk__nav .rk__back:hover{background:var(--cream);color:var(--ink)}
+.pj-head{padding-top:clamp(6.5rem,12vw,9rem);padding-bottom:clamp(1.5rem,4vw,3rem)}
+.pj-head .back{margin-bottom:1.6rem}
+.pj-head .back .back__i{transition:transform .3s var(--ease)}
+.pj-head .back:hover .back__i{transform:translateX(-6px)}
+.pj-head .lead{max-width:44rem;margin-top:1.2rem}
+.pj-card{padding-top:clamp(2.5rem,5vw,4rem);padding-bottom:clamp(2rem,5vw,4rem)}
+.pj-grid{display:grid;gap:2rem}
+@media (min-width:960px){.pj-grid{grid-template-columns:1.35fr .9fr;gap:3rem;align-items:start}}
+.dossier--big{margin-top:1.6rem;padding:1.6rem 1.6rem 1.3rem}
+.dossier--big h3{font-size:clamp(1.7rem,5vw,2.6rem)}
+.dossier--big .money dd{font-size:clamp(1.9rem,6vw,3.2rem)}
+.dossier--big .meter{height:1.5rem}
+.reg--card{background:var(--cream);box-shadow:var(--sh);padding:.6rem 1.2rem 1rem;margin:1.6rem 0 0;border-top:10px solid var(--red)}
+.reg--card div{grid-template-columns:7rem 1fr}
+.pj-about .about__grid{margin-top:1.2rem}
+.pj-logos{padding-bottom:clamp(4rem,9vw,7rem)}
+.pj-logos__h{font:clamp(1.6rem,5vw,2.6rem)/1.1 var(--f-head);text-transform:uppercase;margin:0 0 1.4rem;max-width:40rem}
+.logostrip{background:#fff;border:2px solid var(--ink);box-shadow:var(--sh);padding:clamp(.6rem,2vw,1.4rem);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.logostrip img{display:block;width:100%;height:auto;max-width:none}
+@media (max-width:760px){.logostrip img{width:820px;min-width:820px}}
+.logostrip__hint{display:none;margin:.5rem 0 0}
+@media (max-width:760px){.logostrip__hint{display:block}}
+.pj-logos .btns{margin-top:2rem}
+.dossier--teaser .btn{margin:.4rem 0 .3rem}
