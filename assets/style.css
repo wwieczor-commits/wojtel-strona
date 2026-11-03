@@ -427,10 +427,13 @@ html{overflow-x:clip}
 .pj-about .about__grid{margin-top:1.2rem}
 .pj-logos{padding-bottom:clamp(4rem,9vw,7rem)}
 .pj-logos__h{font:clamp(1.6rem,5vw,2.6rem)/1.1 var(--f-head);text-transform:uppercase;margin:0 0 1.4rem;max-width:40rem}
-.logostrip{background:#fff;border:2px solid var(--ink);box-shadow:var(--sh);padding:clamp(.6rem,2vw,1.4rem);overflow-x:auto;-webkit-overflow-scrolling:touch}
-.logostrip img{display:block;width:100%;height:auto;max-width:none}
-@media (max-width:760px){.logostrip img{width:820px;min-width:820px}}
-.logostrip__hint{display:none;margin:.5rem 0 0}
-@media (max-width:760px){.logostrip__hint{display:block}}
+.logostrip{background:#fff;border:2px solid var(--ink);box-shadow:var(--sh);padding:clamp(.8rem,2.4vw,1.6rem)}
+.logostrip img{display:block;width:100%;height:auto}
+.logostrip__half{display:none!important}
+@media (max-width:700px){
+  .logostrip{padding:.9rem .6rem;display:grid;gap:1rem}
+  .logostrip__wide{display:none!important}
+  .logostrip__half{display:block!important}
+}
 .pj-logos .btns{margin-top:2rem}
 .dossier--teaser .btn{margin:.4rem 0 .3rem}
