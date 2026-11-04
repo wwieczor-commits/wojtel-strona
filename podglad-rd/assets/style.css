@@ -37,7 +37,8 @@ strong{font-weight:600;color:var(--ink)}
 .hdr.stuck{border-bottom-color:var(--line);box-shadow:0 8px 24px -18px rgba(11,18,32,.35)}
 .hdr__in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
 .hdr__logo{display:block;flex:none}
-.hdr__logo img{height:46px;width:auto}
+.hdr__logo img{height:52px;width:auto;display:block}
+@media (max-width:640px){.hdr__logo img{height:40px}}
 .hdr__nav{display:flex;align-items:center;gap:clamp(1rem,2vw,1.9rem)}
 .hdr__nav a{position:relative;font-size:.875rem;font-weight:500;color:var(--txt);text-decoration:none;padding:.4rem 0;letter-spacing:.005em}
 .hdr__nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
