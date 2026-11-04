@@ -189,7 +189,7 @@ strong{font-weight:600;color:var(--ink)}
 @media (min-width:900px){.about__grid{grid-template-columns:5fr 6fr;gap:4.5rem}}
 .photo{margin:0}
 @media (min-width:900px){.about .photo{position:sticky;top:calc(var(--hdr) + 2rem)}}
-.photo__frame{overflow:hidden;background:var(--bg2);border:1px solid var(--line);border-radius:6px;aspect-ratio:4/3}
+.photo__frame{overflow:hidden;background-color:#f8fafc;background-image:linear-gradient(rgba(14,26,43,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(14,26,43,.05) 1px,transparent 1px);background-size:24px 24px;border:1px solid var(--line);border-radius:6px;aspect-ratio:4/3;box-shadow:0 24px 48px -34px rgba(11,18,32,.25)}
 .photo__frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .photo:hover .photo__frame img{transform:scale(1.045)}
 .about__txt p{max-width:38em}
@@ -235,7 +235,6 @@ strong{font-weight:600;color:var(--ink)}
 @media (max-width:560px){.tl__i{grid-template-columns:1fr;gap:.1rem}.tl__yr{line-height:1.5}}
 
 .band--dark{position:relative;background:var(--navy);color:#cfd6e2;padding:clamp(3.5rem,7vw,6rem) 0;overflow:hidden}
-.band--dark::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:linear-gradient(180deg,transparent,#000 40%,transparent);mask-image:linear-gradient(180deg,transparent,#000 40%,transparent)}
 .band--dark .wrap{position:relative}
 .band--dark h3,.band--dark h4{color:#fff}
 .sub{font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:-.03em;margin-bottom:2.5rem}
@@ -375,3 +374,87 @@ a.big:hover{color:var(--red-d)}
   .js .rv{opacity:1;transform:none}
   .meter i{transform:scaleX(1)}
 }
+
+/* ===== SITE-WIDE KRATKA (delikatna siatka, jedno ciągłe tło) ===== */
+:root{--grid:rgba(14,26,43,.055);--grid-d:rgba(255,255,255,.05);--gs:64px;
+  --band:linear-gradient(180deg,rgba(245,247,250,0) 0,rgba(245,247,250,.84) 150px,rgba(245,247,250,.84) calc(100% - 150px),rgba(245,247,250,0) 100%)}
+body{background-color:#fff;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:var(--gs) var(--gs);background-position:-1px -1px}
+.hero,.pj-head,.about,.area,.pj-logos{background:transparent}
+.hero::before,.pj-head::before{display:none}
+.services,.why-sec,.contact,.pj-about{background:var(--band);border-top:0;border-bottom:0;border-block:0}
+.strip{background:rgba(245,247,250,.8)}
+.band--dark,.foot{background-color:var(--navy);background-image:linear-gradient(var(--grid-d) 1px,transparent 1px),linear-gradient(90deg,var(--grid-d) 1px,transparent 1px);background-size:var(--gs) var(--gs)}
+.band--dark{background-image:linear-gradient(var(--grid-d) 1px,transparent 1px),linear-gradient(90deg,var(--grid-d) 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,.035),transparent 30%);background-size:64px 64px,64px 64px,100% 100%}
+.hdr{background:rgba(255,255,255,.9)}
+
+/* ===== ILUSTRACJE (ryc. 1–3) ===== */
+.photo__frame .ill{width:100%;height:100%;transition:transform 1.2s var(--ease);transform-origin:50% 50%}
+.photo:hover .photo__frame .ill{transform:scale(1.04)}
+.ill .o{fill:#fff;stroke:var(--ink);stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+.ill .o2{fill:#f1f4f8;stroke:var(--line-2);stroke-width:1.6;stroke-linejoin:round}
+.ill .fill2{fill:#eef1f5}
+.ill .h{fill:none;stroke:var(--line-2);stroke-width:1.2;stroke-linecap:round}
+.ill .dsh{stroke-dasharray:3 5}
+.ill .dot path{stroke-dasharray:2 5}
+.ill .k{fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ill .axis{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round}
+.ill .r{stroke:var(--red)}
+.ill .fr,.ill .red{fill:var(--red)}
+.ill .fi{fill:var(--ink)}
+.ill .fg rect,.ill .fg{fill:var(--line-2)}
+.ill .cab{fill:none;stroke:var(--line-2);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ill .lab{font:500 13px var(--m);fill:var(--mut);letter-spacing:.06em}
+.ill .flow{stroke-dasharray:6 8}
+.ill .nd{fill:var(--ink)}.ill .nd.red{fill:var(--red)}
+.ill .mesh path{fill:none;stroke:var(--ink);stroke-width:1;opacity:.55}
+.ill .redb{stroke:var(--red);fill:rgba(224,69,43,.1)}
+.ill .pt{fill:#fff;stroke:var(--ink);stroke-width:1.6}
+.ill .screen{fill:#f5f7fa;stroke:var(--line-2);stroke-width:1.2}
+.ill .headr{stroke:var(--red)}.ill .handr{stroke:var(--red)}
+.ill .arm{stroke:var(--red)}
+.ill .ring0{fill:none;stroke:var(--line);stroke-width:9}
+.ill .ring1{fill:none;stroke:var(--ink);stroke-width:9;stroke-dasharray:58 100}
+.ill .ring2{fill:none;stroke:var(--red);stroke-width:9;stroke-dasharray:14 100;stroke-dashoffset:-62}
+.ill .port{stroke-width:1.6}
+.ill .pulse{fill:none;stroke:var(--red);stroke-width:1.4;opacity:0}
+.ill .mv,.ill .mvx{display:none}
+.ill .mv{fill:var(--ink)}.ill .mv.red,.ill .mvx{fill:var(--red)}
+.ill .mv.big{stroke:#fff;stroke-width:1.5}
+@media (prefers-reduced-motion:no-preference){
+  .js .ill .draw{stroke-dasharray:1;stroke-dashoffset:1}
+  .js .in .ill .draw{animation:draw 2.4s var(--ease) var(--d,.3s) forwards}
+  .js .ill .draw2{stroke-dasharray:0 100}
+  .js .in .ill .ring1{animation:ringA 1.6s var(--ease) .5s forwards}
+  .js .in .ill .ring2{animation:ringB .8s var(--ease) 1.7s forwards}
+  .js .ill .bar{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0)}
+  .js .in .ill .bar{animation:grow .9s var(--ease) calc(.35s + var(--k)*.12s) forwards}
+  .js .ill .cl{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(0)}
+  .js .in .ill .cl{animation:typeX .7s var(--ease) calc(.3s + var(--k)*.16s) forwards}
+  .ill .cur{animation:blink 1.1s steps(1) infinite}
+  .ill .flow{animation:dash 3s linear infinite}
+  .ill .needle{transform-origin:190px 104px;animation:sway 5s ease-in-out infinite}
+  .ill .arm,.ill .handr{animation:hand 6s ease-in-out infinite}
+  .ill .mesh{animation:meshA 6s ease-in-out infinite}
+  .ill .mvx{display:block;animation:slideX 5s linear infinite var(--d,0s);opacity:0}
+  .ill .pulse{transform-box:fill-box;transform-origin:center;animation:pulseA 3.2s ease-out infinite var(--d,0s)}
+  .ill .nd.red{animation:ndp 2.4s ease-in-out infinite}
+  .ill .red-band{animation:bandA 4s ease-in-out infinite}
+  @supports (offset-path:path('M0 0')){
+    .ill .mv{display:block;offset-rotate:0deg;opacity:0;animation:mvA var(--t,5s) linear infinite var(--d,0s)}
+    .ill .mv.big{animation-timing-function:ease-in-out;animation-direction:alternate;animation-name:mvB}
+  }
+}
+@keyframes grow{to{transform:scaleY(1)}}
+@keyframes typeX{to{transform:scaleX(1)}}
+@keyframes ringA{to{stroke-dasharray:58 100}}
+@keyframes ringB{to{stroke-dasharray:14 100}}
+@keyframes blink{0%,55%{opacity:1}56%,100%{opacity:0}}
+@keyframes sway{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+@keyframes hand{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes meshA{0%,100%{opacity:1}50%{opacity:.55}}
+@keyframes slideX{0%{transform:translateX(0);opacity:0}8%,88%{opacity:.9}100%{transform:translateX(480px);opacity:0}}
+@keyframes pulseA{0%{transform:scale(1);opacity:.7}70%,100%{transform:scale(2.6);opacity:0}}
+@keyframes ndp{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes bandA{0%,100%{fill:#fff}50%{fill:rgba(224,69,43,.14)}}
+@keyframes mvA{0%{offset-distance:0%;opacity:0}8%{opacity:1}92%{opacity:1}100%{offset-distance:100%;opacity:0}}
+@keyframes mvB{0%{offset-distance:0%;opacity:1}100%{offset-distance:100%;opacity:1}}
